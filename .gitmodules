@@ -1,0 +1,3 @@
+[submodule "clientstream"]
+	path = clientstream
+	url = https://github.com/meanish/VideoStreamer.git
