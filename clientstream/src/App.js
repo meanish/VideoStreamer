@@ -1,29 +1,19 @@
-import React, { useEffect } from "react";
-import flvjs from "flv.js";
+import React from "react";
+import ReactPlayer from "react-player";
 
 const App = () => {
-  useEffect(() => {
-    if (flvjs.isSupported()) {
-      const videoElement = document.getElementById("videoElement");
-      const flvPlayer = flvjs.createPlayer({
-        type: "flv",
-        url: "http://localhost:8003/live/moviestream.flv",
-      });
-      flvPlayer.attachMediaElement(videoElement);
-      flvPlayer.load();
-      flvPlayer.play();
-    }
-  }, []);
-
   return (
-    <>
-      <div className="video-streamer">
-        <h1>Video Streamer</h1>
-        <div className="video-container">
-          <video id="videoElement" controls width="640" height="360"></video>
-        </div>
-      </div>
-    </>
+    <div className="video-container">
+      <h1>Video Streaming from OBS</h1>
+      <ReactPlayer
+        url="http://localhost:8003/live/moviestream.flv"
+        width={620}
+        height={340}
+        controls={true}
+        playing={true}
+        muted={true} // Muting the video for autoplay
+      />
+    </div>
   );
 };
 

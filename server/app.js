@@ -6,10 +6,10 @@ const app = express();
 const config2 = {
   rtmp: {
     port: 1936,
-    chunk_size: 60000,
+    chunk_size: 10000,
     gop_cache: true,
-    ping: 30,
-    ping_timeout: 60,
+    ping: 10,
+    ping_timeout: 30,
   },
   http: {
     port: 8003,
@@ -20,6 +20,7 @@ const config2 = {
 var nms2 = new NodeMediaServer(config2);
 
 nms2.run();
+false;
 
 app.listen(PORT, () => {
   console.log(`Backend server is running on port ${PORT}`);
