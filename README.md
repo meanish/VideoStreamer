@@ -29,3 +29,5 @@ Absolutely any feedback on the project is welcomed.
 5. Open vscode terminal and switch dir to clientstream. Install node package (npm install) and run npm start. 
 
 6. (http://localhost:3000/) on your browser(may differ according to your configs) will get started on the browser where the streaming video is being displayed.
+
+
